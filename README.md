@@ -11,7 +11,7 @@ Author: **[Moin Khan](https://github.com/mo-inkhan)**
 
 ## Installation:
 
-#### via `npm` [package](https://www.npmjs.com/package/mandelbrot).
+#### via `npm` [package](https://www.npmjs.com/package/mandelbrot-js).
 
     npm i mandelbrot-js
 
