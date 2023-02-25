@@ -1,7 +1,7 @@
 {
   "name": "mandelbrot-js",
   "description": "mandelbrot-js =======",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
   "exports": {
@@ -224,7 +224,7 @@
   ],
   "author": "Moin Khan",
   "license": "MIT",
-  "types": "./dist\\index.d.ts",
+  "types": "./dist/mjs/index.d.ts",
   "bugs": {
     "url": "https://github.com/mo-inkhan/mandelbrot-js/issues"
   },
