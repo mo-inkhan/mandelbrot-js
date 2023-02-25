@@ -1,7 +1,7 @@
 {
   "name": "mandelbrot-js",
   "description": "mandelbrot-js =======",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
   "exports": {
