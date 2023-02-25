@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Project Mandelbrot
  *
@@ -7,6 +8,8 @@
  * @link https://mo.inkhan.dev
  *
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.complexSquare = exports.complexADD = exports.complexMod = void 0;
 /**
  * Square a number
  *
@@ -37,9 +40,10 @@ const sqrt = (n) => {
  * @return {number} Modulus of the number
  *
  */
-export const complexMod = (Z) => {
+const complexMod = (Z) => {
     return sqrt(square(Z[0]) + square(Z[1]));
 };
+exports.complexMod = complexMod;
 /**
  * Addition of two complex numbers
  *
@@ -49,9 +53,10 @@ export const complexMod = (Z) => {
  * @return {ICordinate} Addition of two numbers
  *
  */
-export const complexADD = (Z1, Z2) => {
+const complexADD = (Z1, Z2) => {
     return [Z1[0] + Z2[0], Z1[1] + Z2[1]];
 };
+exports.complexADD = complexADD;
 /**
  * Square of a complex numbers
  *
@@ -60,6 +65,7 @@ export const complexADD = (Z1, Z2) => {
  * @return {ICordinate} Square of the number
  *
  */
-export const complexSquare = (Z) => {
+const complexSquare = (Z) => {
     return [square(Z[0]) - square(Z[1]), 2 * Z[0] * Z[1]];
 };
+exports.complexSquare = complexSquare;

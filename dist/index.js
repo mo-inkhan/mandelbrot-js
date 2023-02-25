@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Project Mandelbrot
  *
@@ -13,7 +14,8 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Mandelbrot_instances, _Mandelbrot_getNextCordinates;
-import { complexADD, complexMod, complexSquare } from "./complex";
+Object.defineProperty(exports, "__esModule", { value: true });
+const complex_1 = require("./complex");
 class Mandelbrot {
     constructor(MAX_ITERATIONS) {
         _Mandelbrot_instances.add(this);
@@ -48,13 +50,13 @@ class Mandelbrot {
         let value = [0, 0];
         for (let i = 0; i <= this.MAX_ITERATIONS; i++) {
             value = __classPrivateFieldGet(this, _Mandelbrot_instances, "m", _Mandelbrot_getNextCordinates).call(this, value, number);
-            if (complexMod(value) > 2)
+            if ((0, complex_1.complexMod)(value) > 2)
                 return [false, i];
         }
         return [true, this.MAX_ITERATIONS];
     }
 }
 _Mandelbrot_instances = new WeakSet(), _Mandelbrot_getNextCordinates = function _Mandelbrot_getNextCordinates(current, number) {
-    return complexADD(complexSquare(current), number);
+    return (0, complex_1.complexADD)((0, complex_1.complexSquare)(current), number);
 };
-export default Mandelbrot;
+exports.default = Mandelbrot;
